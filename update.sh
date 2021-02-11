@@ -22,5 +22,5 @@ cd ../
 python3 template.py < out/changed_usernames.txt
 
 # Copy a bunch of stuff into output
-cp -r template/static/ out/static/
+cp -r template/static/ out/
 cp template/index.html out/index.html
