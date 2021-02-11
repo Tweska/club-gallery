@@ -1,4 +1,7 @@
 *.log
 *.txt
 *.png
+
+out/
+
 __pycache__/
