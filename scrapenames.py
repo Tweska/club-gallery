@@ -18,4 +18,4 @@ users = tree.xpath(SELECTOR)
 if __name__ == '__main__':
     # Print all usernames to stdout.
     for user in users:
-        print(user)
+        print(user[1:])
