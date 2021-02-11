@@ -1,3 +1,7 @@
+# Name:         template.py
+# Author:       ~tweska
+# Description:  Fill template in template path with data.
+
 import sys
 
 TEMPLATE_PATH = 'template/'
