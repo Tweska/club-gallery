@@ -3,6 +3,7 @@
 # Description:  Fill template in template path with data.
 
 import sys
+from datetime import datetime
 
 TEMPLATE_PATH = 'template/'
 OUTPUT_PATH = 'out/'
@@ -14,6 +15,9 @@ template_file.close()
 item_file = open("{}item.html".format(TEMPLATE_PATH))
 item = item_file.read()
 item_file.close()
+
+now = datetime.now()
+update_datetime = now.strftime("%d-%m-%Y %H:%M")
 
 users = { 'a': [], 'b': [], 'c': [], 'd': [], 'e': [], 'f': [], 'g': [], \
           'h': [], 'i': [], 'j': [], 'k': [], 'l': [], 'm': [], 'n': [], \
@@ -32,7 +36,7 @@ for key in users.keys():
     items = ""
     for user in users[key]:
         items += item.format(user, user, user)
-    html = template.format(items)
+    html = template.format(update_datetime, items)
 
     f = open('{}{}.html'.format(OUTPUT_PATH, key), 'w')
     f.write(html)
