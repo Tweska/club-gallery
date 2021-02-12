@@ -11,7 +11,7 @@ mkdir out/screenshots/
 python3 scrapenames.py > out/changed_usernames.txt
 
 # Take screenshots of all pages
-python3 screenshot.py < out/changed_usernames.txt
+python3 screenshots.py < out/changed_usernames.txt
 
 # Zip the screenshots
 cd out/
@@ -24,3 +24,7 @@ python3 template.py < out/changed_usernames.txt
 # Copy a bunch of stuff into output
 cp -r template/static/ out/
 cp template/index.html out/index.html
+
+# Copy everything into public_html
+rm -r ../public_html/
+cp -r out/ ../public_html/
