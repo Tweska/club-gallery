@@ -9,9 +9,11 @@ from PIL import Image
 
 BASE_URL = 'https://tilde.club/'
 OUTPUT_PATH = 'out/screenshots/'
+CHROME_BINARY = '/home/tweska/.local/bin/chromium/chrome'
 
 options = webdriver.ChromeOptions()
 options.headless = True
+options.binary_location = CHROME_BINARY
 driver = webdriver.Chrome(options=options)
 driver.set_window_size(800, 600)
 
